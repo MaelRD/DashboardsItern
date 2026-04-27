@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── Reset & Base ────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: #F4F6F9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: #F4F6F9; }
+::-webkit-scrollbar-thumb { background: #BDC3C7; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #95A5A6; }
+
+/* ── Navbar ──────────────────────────────────────────────────────────────── */
+.navbar {
+  background: linear-gradient(135deg, #1A252F 0%, #2C3E50 100%) !important;
+  border-bottom: 3px solid #18BC9C;
+  padding: 10px 0;
+}
+.navbar-brand { letter-spacing: -0.02em; }
+.navbar .nav-link { transition: color 0.2s; }
+.navbar .nav-link:hover { color: #18BC9C !important; }
+
+/* ── KPI Cards ───────────────────────────────────────────────────────────── */
+.kpi-card {
+  border-radius: 10px !important;
+  border: 1px solid #E8ECF0 !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(44,62,80,0.12) !important;
+}
+.kpi-card .card-body { padding: 16px 18px; }
+
+/* ── Chart Cards ─────────────────────────────────────────────────────────── */
+.chart-card {
+  border-radius: 10px !important;
+  border: 1px solid #E8ECF0 !important;
+  background: #FFFFFF;
+  transition: box-shadow 0.2s ease;
+}
+.chart-card:hover { box-shadow: 0 6px 20px rgba(44,62,80,0.08) !important; }
+.chart-card .card-header {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #F0F3F5 !important;
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2C3E50;
+}
+
+/* ── What-If Card ────────────────────────────────────────────────────────── */
+.whatif-card {
+  border-radius: 10px !important;
+  border: 1px solid #E8ECF0 !important;
+  background: linear-gradient(135deg, #FDFEFE 0%, #F8F9FA 100%);
+}
+.whatif-card .card-header {
+  background: linear-gradient(135deg, #F39C12 0%, #E67E22 100%) !important;
+  border: none !important;
+  color: white !important;
+  padding: 12px 18px;
+  border-radius: 9px 9px 0 0 !important;
+}
+
+/* ── Alert Banner ────────────────────────────────────────────────────────── */
+.alert { border-radius: 0 !important; border-left-width: 4px !important; margin-bottom: 0; }
+.alert-danger  { border-left-color: #E74C3C !important; }
+.alert-warning { border-left-color: #F39C12 !important; }
+
+/* ── Dash DataTable ──────────────────────────────────────────────────────── */
+.dash-table-container .dash-spreadsheet-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.dash-table-container .dash-header { font-size: 11px !important; }
+.dash-table-container .dash-cell { font-size: 13px !important; }
+.dash-filter input {
+  font-size: 12px !important;
+  border-radius: 4px !important;
+}
+
+/* ── Slider overrides ────────────────────────────────────────────────────── */
+.rc-slider-rail   { background: #E8ECF0 !important; height: 4px !important; }
+.rc-slider-track  { background: linear-gradient(90deg, #F39C12, #E67E22) !important; height: 4px !important; }
+.rc-slider-handle {
+  border: 2px solid #F39C12 !important;
+  background: #FFFFFF !important;
+  width: 16px !important; height: 16px !important;
+  margin-top: -6px !important;
+  box-shadow: 0 2px 6px rgba(243,156,18,0.4) !important;
+  opacity: 1 !important;
+  transition: box-shadow 0.15s !important;
+}
+.rc-slider-handle:hover { box-shadow: 0 2px 10px rgba(243,156,18,0.6) !important; }
+.rc-slider-mark-text { color: #95A5A6 !important; font-size: 11px !important; font-family: 'Inter', sans-serif !important; }
+.rc-slider-tooltip-inner {
+  background: #2C3E50 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+  padding: 3px 8px !important;
+}
+
+/* ── DatePicker overrides ────────────────────────────────────────────────── */
+.DateInput { width: auto !important; }
+.DateInput_input {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  color: #2C3E50 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #DEE2E6 !important;
+  border-radius: 6px !important;
+  padding: 6px 10px !important;
+  font-weight: 500 !important;
+}
+.DateRangePickerInput {
+  background: transparent !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+}
+.DateRangePickerInput_arrow { color: #BDC3C7 !important; }
+.CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover {
+  background: #2C3E50 !important;
+  border-color: #2C3E50 !important;
+}
+.CalendarDay__hovered_span, .CalendarDay__selected_span {
+  background: #ECF0F1 !important;
+  color: #2C3E50 !important;
+}
+
+/* ── Badge ───────────────────────────────────────────────────────────────── */
+.badge {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  padding: 3px 8px !important;
+}
+
+/* ── Runway Card (what-if result) ────────────────────────────────────────── */
+.runway-box {
+  background: linear-gradient(135deg, #EBF5FB, #D6EAF8) !important;
+  border: 1px solid #AED6F1 !important;
+  border-radius: 8px !important;
+}
+
+/* ── Section divider ─────────────────────────────────────────────────────── */
+.section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #95A5A6;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #F0F3F5;
+}
+
+/* ── Number font (KPI values) ────────────────────────────────────────────── */
+.kpi-value {
+  font-family: 'Inter', sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* ── Responsive tweaks ───────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .kpi-card .card-body { padding: 12px 14px; }
+  .chart-card .card-header { font-size: 12px; }
+  .navbar-brand { font-size: 14px !important; }
+}
+
+/* ── Loading spinner ─────────────────────────────────────────────────────── */
+._dash-loading {
+  background: rgba(244,246,249,0.7) !important;
+  backdrop-filter: blur(2px) !important;
+}
+._dash-loading-callback { opacity: 0.6; transition: opacity 0.2s; }
